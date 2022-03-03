@@ -25,6 +25,17 @@ app.get("/api/hello", function (req, res) {
   res.json({greeting: 'hello API'});
 });
 
+// Api Endpoint Header Parser Response
+app.get("/api/whoami", function (req, res) {
+  res.json({
+  "ipaddress": req.connection.remoteAddress,
+  "language": req.headers.["accept-language"],
+  "software": request.Headers["User-Agent"]
+
+    });
+  });
+
+
 
 
 // listen for requests :)
